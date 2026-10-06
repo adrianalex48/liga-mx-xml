@@ -1,0 +1,33 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT jornada (partido+)>
+<!ATTLIST jornada
+    numero CDATA #REQUIRED
+    fecha CDATA #REQUIRED
+    liga CDATA #REQUIRED>
+
+<!ELEMENT partido (local, visitante, arbitro?, estadisticas?)>
+<!ATTLIST partido
+    id ID #REQUIRED
+    estadio CDATA #REQUIRED
+    estado CDATA #REQUIRED>
+
+<!ELEMENT local EMPTY>
+<!ATTLIST local
+    nombre CDATA #REQUIRED
+    goles CDATA #REQUIRED>
+
+<!ELEMENT visitante EMPTY>
+<!ATTLIST visitante
+    nombre CDATA #REQUIRED
+    goles CDATA #REQUIRED>
+
+<!ELEMENT arbitro (#PCDATA)>
+
+<!ELEMENT estadisticas (posesion, tiros, tiros_puerta, faltas, tarjetas_amarillas, tarjetas_rojas)>
+<!ELEMENT posesion (#PCDATA)>
+<!ELEMENT tiros (#PCDATA)>
+<!ELEMENT tiros_puerta (#PCDATA)>
+<!ELEMENT faltas (#PCDATA)>
+<!ELEMENT tarjetas_amarillas (#PCDATA)>
+<!ELEMENT tarjetas_rojas (#PCDATA)>
